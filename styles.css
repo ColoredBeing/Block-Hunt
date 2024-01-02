@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background: repeating-linear-gradient(-45deg, #228B22, #228B22 10px, #FFFFFF 10px, #FFFFFF 20px);
+}
+
+.game-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.chicken {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    background: repeating-linear-gradient(-45deg, #FFD700, #FFD700 10px, #FFFFFF 10px, #FFFFFF 20px);
+    animation: spinAndBrighten 1s infinite alternate; 
+}
+.target {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    transition: background-color 0.5s ease, transform 0.5s ease;
+    opacity: 0.9;
+    z-index: -1;
+}
+
+
+.flash {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: white;
+    opacity: 0;
+    pointer-events: none; 
+}
+
+@keyframes spinAndBrighten {
+    from {
+        transform: translate(-50%, 50%) rotate(0deg);
+        filter: brightness(1);
+    }
+    to {
+        transform: translate(-50%, 50%) rotate(360deg);
+        filter: brightness(100);
+    }
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.mode-selector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.mode-selector button {
+    padding: 15px;
+    font-size: 18px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+
+.game-container {
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.game-mode {
+    display: none;
+}
+.points {
+    position: absolute;
+    top: 20px; 
+    left: 20px; 
+    color: white;
+    font-size: 18px;
+    z-index: 1;
+}
+
+
+.warning-message {
+    display: none;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    text-align: center;
+    background-color: #ff0000;
+    color: #ffffff;
+    padding: 10px;
+}

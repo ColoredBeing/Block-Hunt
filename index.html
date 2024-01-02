@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distraction Game</title>
+    <link rel="stylesheet" href="/Chicken Road/css/styles.css">
+</head>
+<body>
+    <div class="mode-selector">
+        <button onclick="showEpilepticAttackWarning()">Epileptic Attack</button>
+    </div>
+
+    <div id="epilepticWarning" class="warning-message">
+        <p>WARNING: This game mode contains flashing colors and lights.</p>
+    </div>
+
+    <div id="gameContainer" class="game-container">
+        <div class="flash"></div>
+        <div class="chicken" id="epilepticAttack"></div>
+        <div class="target"></div>
+        <div class="points">Points: <span id="pointCount">0</span></div>
+    </div>
+
+    <script src="/Chicken Road/js/script.js"></script>
+</body>
+</html>
